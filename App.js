@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 
 export default function App() {
@@ -7,6 +7,12 @@ export default function App() {
   return (
     <View>
       <Text style={styles.paragraph}>Hello, World {fullname}</Text>
+
+      <TextInput 
+      placeholder="Enter your name"
+      onChangeText={(text) => setFullname(text)}
+      />
+
      </View>
   );
 }
